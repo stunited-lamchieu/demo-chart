@@ -1,0 +1,168 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-line-chart-day',
+  templateUrl: './line-chart-day.component.html',
+  styleUrls: ['./line-chart-day.component.css'],
+})
+export class LineChartDayComponent implements OnInit {
+  options: any;
+  constructor() {}
+
+  ngOnInit(): void {
+    this.options = {
+      title: {
+        text: 'Doanh thu theo tuần trong năm 2022',
+      },
+      tooltip: {
+        trigger: 'axis',
+      },
+      legend: {
+        data: ['Doanh thu gộp', 'Doanh thu giảm', 'Doanh thu ròng'],
+      },
+      grid: {
+        bottom: '20%',
+        containLabel: true,
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {},
+        },
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: true,
+        data: [
+          'Tuần 1',
+          'Tuần 2',
+          'Tuần 3',
+          'Tuần 4',
+          'Tuần 5',
+          'Tuần 6',
+          'Tuần 7',
+          'Tuần 8',
+          'Tuần 9',
+          'Tuần 10',
+          'Tuần 11',
+          'Tuần 12',
+          'Tuần 13',
+          'Tuần 14',
+          'Tuần 15',
+          'Tuần 16',
+          'Tuần 17',
+          'Tuần 18',
+          'Tuần 19',
+          'Tuần 20',
+          'Tuần 21',
+          'Tuần 22',
+          'Tuần 23',
+          'Tuần 24',
+          'Tuần 25',
+          'Tuần 26',
+          'Tuần 27',
+          'Tuần 28',
+          'Tuần 29',
+          'Tuần 30',
+          'Tuần 31',
+          'Tuần 32',
+          'Tuần 33',
+          'Tuần 34',
+          'Tuần 35',
+          'Tuần 36',
+          'Tuần 37',
+          'Tuần 38',
+          'Tuần 39',
+          'Tuần 40',
+          'Tuần 41',
+          'Tuần 42',
+          'Tuần 43',
+          'Tuần 44',
+          'Tuần 45',
+          'Tuần 46',
+          'Tuần 47',
+          'Tuần 48',
+          'Tuần 49',
+          'Tuần 50',
+          'Tuần 51',
+          'Tuần 52',
+          'Tuần 53',
+          'Tuần 54',
+          'Tuần 55',
+          'Tuần 56',
+          'Tuần 57',
+          'Tuần 58',
+          'Tuần 59',
+          'Tuần 60',
+          'Tuần 61',
+          'Tuần 62',
+          'Tuần 63',
+          'Tuần 64',
+          'Tuần 65',
+          'Tuần 66',
+          'Tuần 67',
+          'Tuần 68',
+          'Tuần 69',
+          'Tuần 70',
+          'Tuần 71',
+        ],
+      },
+      yAxis: {
+        type: 'value',
+        minInterval: 1,
+      },
+      dataZoom: [
+        {
+          show: true,
+          realtime: true,
+          start: 0,
+          end: 100,
+          xAxisIndex: [0, 1],
+          width: '60%',
+          left: 'center',
+        },
+        {
+          type: 'inside',
+          realtime: true,
+          start: 0,
+          end: 100,
+          xAxisIndex: [0, 1],
+        },
+      ],
+      series: [
+        {
+          name: 'Doanh thu gộp',
+          type: 'line',
+          data: [
+            20, 25, 40, 30, 32, 31, 35, 48, 50, 55, 45, 38, 41, 44, 47, 50, 53,
+            56, 59, 62, 65, 68, 71, 74, 77, 80, 83, 86, 89, 92, 95, 98, 101,
+            104, 107, 110, 113, 116, 119, 122, 125, 128, 131, 134, 137, 140,
+            143, 146, 149, 152, 155, 161, 164, 134, 137, 140, 143, 146, 149,
+            152, 155, 161, 164,
+          ],
+        },
+        {
+          name: 'Doanh thu giảm',
+          type: 'line',
+          data: [
+            1, 4, 7, 9, 10, 5, 7, 8, 9, 15, 12, 15, 18, 21, 24, 27, 30, 33, 36,
+            39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87,
+            90, 93, 96, 99, 102, 105, 108, 111, 114, 117, 120, 123, 126, 129,
+            132, 135, 138, 141, 134, 137, 140, 143, 146, 149, 152, 155, 161,
+            164,
+          ],
+        },
+        {
+          name: 'Doanh thu ròng',
+          type: 'line',
+          data: [
+            19, 21, 33, 25, 22, 33, 15, 23, 22, 28, 24, 30, 33, 36, 39, 42, 45,
+            48, 51, 54, 57, 60, 62, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96,
+            99, 102, 105, 108, 111, 114, 117, 120, 123, 126, 129, 132, 135, 138,
+            141, 144, 147, 150, 153, 156, 134, 137, 140, 143, 146, 149, 152,
+            155, 161, 164,
+          ],
+        },
+      ],
+    };
+  }
+}
